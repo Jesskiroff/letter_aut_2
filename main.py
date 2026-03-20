@@ -11,4 +11,6 @@ with open("./Input/Letters/starting_letter.txt") as letter_file:
 for name in names:
     name = name.strip()
     new_letter = letter.replace(PLACEHOLDER, name)
+    with open(f"./Output/letter_for{name}.docx", mode = "w") as completed_letter:
+        completed_letter.write(new_letter)
    
